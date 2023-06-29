@@ -23,26 +23,42 @@ const usuarios = [
   
   /* JSON.parse()*/
 
-  const listaUsuarios  JSON.parse(usuariosJSON);
+  const listaUsuarios = JSON.parse(usuariosJSON);
 
   let form = document.querySelector("form");
   const botaoLogar = document.querySelector("#form-botao");
+  console.log("teste");
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let email = document.querySelector(#email).value;
-    let senha = document.querySelector(#senha).value;
+    let email = document.querySelector("#email").value;
+    let senha = document.querySelector("#senha").value;
 
-    listaUsuarios.array.forEach(usuario => {
-        if(usuario.email.toUpperCase() === email.trim().toUpperCase &&
-        usuario.senha.toUpperCase() === senha.trim().toUpperCase){
-            console.log("deu bom")
+    /*let control = true;
+    if(usuario.email.trim()==""){
+      control = false;
+    }else if(usuario.senha.trim()==""){
+      control = false;
+    };
+
+    console.log(control.value);*/
+
+    listaUsuarios.forEach(usuario => {
+        if(usuario.email.toUpperCase() == email.trim().toUpperCase() &&
+        usuario.senha.toUpperCase() == senha.trim().toUpperCase()){
+            console.log("deu bom");
             //inserir em JSON e inserir session storage
+            sessionStorage.setItem("emailUsuario",JSON.stringify(usuario.email));
+            console.log(usuario.email);
             //ou passar 3 atributos
+            //passar para a proxima pagina
+            const url = "bemvindo.html";
+            window.location = (url);
         }
         else{
             //alert
+            console.log("nops");
         };
         
     });
