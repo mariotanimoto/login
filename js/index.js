@@ -35,14 +35,22 @@ const usuarios = [
     let email = document.querySelector("#email").value;
     let senha = document.querySelector("#senha").value;
 
-    /*let control = true;
-    if(usuario.email.trim()==""){
-      control = false;
-    }else if(usuario.senha.trim()==""){
-      control = false;
-    };
+   /* emailDigitado = email.value.trim();
+    senhaDigitada = senha.value.trim();
 
-    console.log(control.value);*/
+  if (emailDigitado === "") {
+    email.classList.add("erro");
+    return;
+  } else {
+    email.classList.remove("erro");
+  }
+
+  if (senhaDigitada === "") {
+    senha.classList.add("erro");
+    return;
+  } else {
+    senha.classList.remove("erro");
+  }*/
 
     listaUsuarios.forEach(usuario => {
         if(usuario.email.toUpperCase() == email.trim().toUpperCase() &&
