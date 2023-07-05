@@ -1,7 +1,16 @@
-body = document.querySelector("body");
-console.log(body);
-let nomeUsuario = sessionStorage.getItem("nomeUsuario");
-let nomeExibido = JSON.parse(nomeUsuario);
+window.addEventListener("load", () => {
 
-body.innerHTML = `
-    <h1>Bem vindo ${nomeExibido} <h1>`;
+  titulo = document.querySelector("h1");
+  let nomeUsuario = sessionStorage.getItem("nomeUsuario");
+  let nomeExibido = JSON.parse(nomeUsuario);
+
+  titulo.innerText = ` Bem vindo ${nomeExibido} `;
+  let botaoSair = document.querySelector("#sair");
+  console.log(botaoSair);
+  botaoSair.addEventListener("click", () => {
+    sessionStorage.clear();
+    const url = "index.html";
+    window.location = url;
+  });
+
+});
