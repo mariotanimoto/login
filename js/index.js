@@ -49,7 +49,7 @@ const usuarios = [
         usuario.senha.toUpperCase() == senha.trim().toUpperCase()){
             console.log("deu bom");
             //inserir em JSON e inserir session storage
-            sessionStorage.setItem("emailUsuario",JSON.stringify(usuario.email));
+            sessionStorage.setItem("nomeUsuario",JSON.stringify(usuario.name));
             console.log(usuario.email);
             //ou passar 3 atributos
             //passar para a proxima pagina

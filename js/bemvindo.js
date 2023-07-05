@@ -1,7 +1,7 @@
 body = document.querySelector("body");
 console.log(body);
-let emailUsuario = sessionStorage.getItem("emailUsuario");
-let emailExibido = JSON.parse(emailUsuario);
+let nomeUsuario = sessionStorage.getItem("nomeUsuario");
+let nomeExibido = JSON.parse(nomeUsuario);
 
 body.innerHTML = `
-    <h1>Bem vindo `+ emailExibido `<h1>`;
+    <h1>Bem vindo ${nomeExibido} <h1>`;
