@@ -14,3 +14,6 @@ window.addEventListener("load", () => {
   });
 
 });
+
+body.innerHTML = `
+    <h1>Bem vindo `+ emailExibido `<h1>`;
