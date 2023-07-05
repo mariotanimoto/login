@@ -34,22 +34,31 @@ form.addEventListener("submit", (event) => {
 
   let email = document.querySelector("#email").value;
   let senha = document.querySelector("#senha").value;
-  console.log(email);
-  console.log(senha);
+  let emailHTML = document.querySelector("#email");
+  let senhaHTML = document.querySelector("#senha");
+  
+  console.log('email:' + email);
+  console.log('seha : ' +senha);
   console.log("oiiii");
 
       let control = true;
+      
 
-      if ( email.value == null || email.value.trim() === "") {
-        
+      if (email.trim() === "") {
+        emailHTML.classList.add("erro");
         console.log("nome nulo")
         control = false;
+      }else{
+        emailHTML.classList.remove("erro");
       }
-      if ( senha.value == null || senha.value.trim() == "") {
-        
+      if (senha.trim() === "") {
+        senhaHTML.classList.add("erro");
         console.log("senha nula")
         control = false;
+      }else{
+        senhaHTML.classList.remove("erro");
       };
+
       console.log("validação feita")
       if ((control = true)) {
         listaUsuarios.forEach((usuario) => {

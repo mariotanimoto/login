@@ -1,7 +1,12 @@
 .erro{
   background-color: red;
 }
-
+.msgerroActive{
+  visibility: hidden;
+}
+.msgerro{
+  color: red;
+}
 h1 {
     text-align: center;
     font-size: 2rem;
